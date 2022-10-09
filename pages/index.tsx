@@ -1,23 +1,29 @@
-import { Box, Heading } from "@chakra-ui/react";
+import AboutSection from "../components/home/AboutSection";
+import FeatureSection from "../components/home/FeatureSection";
+import Head from "next/head";
+import Layout from "../components/Layout";
 import { NextPage } from "next";
-import React from "react";
+import TeamSection from "../components/home/TeamSection";
+import TestimonialSection from "../components/home/TestimonialSection";
+import PostSection from "../components/home/PostSection";
 
 const Home: NextPage<{}> = () => {
 	return (
-		<Box
-			fontSize={"9xl"}
-			fontWeight={"extrabold"}
-			color={{
-				base: "green.500",
-				sm: "blue.500",
-				md: "red.500",
-				lg: "gray.400",
-				xl: "tomato",
-				"2xl": "cyan.900",
-			}}
-		>
-			index
-		</Box>
+		<Layout>
+			<Head>
+				<title>Home</title>
+			</Head>
+			{/* Feature Section */}
+			<FeatureSection />
+			{/* About Section */}
+			<AboutSection />
+			{/* Team Section */}
+			<TeamSection />
+			{/* Testimonial Section */}
+			<TestimonialSection />
+			{/* Post Section */}
+			<PostSection />
+		</Layout>
 	);
 };
 
